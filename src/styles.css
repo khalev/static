@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+.spacer{
+  margin: 10px;
+}
+.btn-size{
+  width: 200px;
+}
+
+.content{
+  width: 100%;     /*80*/
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  box-shadow: 1px 2px 1px #bbb;
+  margin: 0 auto;
+}
+.content-spacing{
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+clickable{
+  cursor: pointer;
+}

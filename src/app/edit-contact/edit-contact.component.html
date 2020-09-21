@@ -1,0 +1,61 @@
+<div class="content-spacing">
+  <div class="panel panel-primary"  *ngIf="mode==1" >
+    <div class="panel-heading">Nouveau Contact</div>
+    <div class="panel-body">
+
+      <div >
+        <div class="form-group">
+          <label class="control-label">Prenom : </label>
+          <input type="text" class="form-control"  [(ngModel)]="contact.prenom"/>
+
+        </div>
+        <div class="form-group">
+          <label class="control-label">Nom : </label>
+          <input type="text" class="form-control"  [(ngModel)]="contact.nom"/>
+        </div>
+        <div class="form-group">
+          <label class="control-label">Date Naissance : </label>
+          <input type="date" class="form-control"  [(ngModel)]="contact.dateNaissance"/>
+        </div>
+        <div class="form-group">
+          <label class="control-label">Telephone : </label>
+          <input type="text" class="form-control"  [(ngModel)]="contact.telephone"/>
+        </div>
+
+        <button class="btn btn-primary" (click)="updateContact()">Valider</button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="panel panel-primary"  *ngIf="mode==2" >
+    <div class="panel-heading">confirmation</div>
+    <div class="panel-body">
+
+      <div >
+
+
+        <div class="form-group">
+          <label class="control-label">Prenom : </label>
+          <label>{{contact.prenom}}</label>
+        </div>
+        <div class="form-group">
+          <label class="control-label">Nom : </label>
+          <label>{{contact.nom}}</label>
+        </div>
+        <div class="form-group">
+          <label class="control-label">Date Naissance : </label>
+          <label>{{contact.dateNaissance}}</label>
+        </div>
+        <div class="form-group">
+          <label class="control-label">Telephone : </label>
+          <label>{{contact.telephone}}</label>
+        </div>
+
+        <!--<button class="btn btn-primary" (click)="mode=1">nouveau contact</button>-->
+      </div>
+    </div>
+  </div>
+
+

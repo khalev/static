@@ -1,0 +1,45 @@
+ <div class="content-spacing">
+<div class="panel panel-primary">
+<div class="panel-heading">
+  Liste des contacts
+</div>
+  <div class="panel-body">
+    <div class="form-inline">
+
+         <input type="text" class="form-control" placeholder="Rechercher parmis les contacts" [(ngModel)]="motCle"/>
+        <button class="btn btn-primary" type="submit" (click)="onSubmitSearch()">Search </button>
+
+    </div>
+    <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>N°</th>
+      <th>Prenom</th>
+      <th>Nom</th>
+      <th>Telephone</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+      <tbody>
+      <tr *ngFor="let c of pageContacts?.content">
+        <td>{{c.id}}</td>
+       <td>{{c.prenom}}</td>
+        <td>{{c.nom}}</td>
+        <td>{{c.telephone}}</td>
+
+          <td><button class="btn btn-warning" (click)="onEditContact(c.id)">Modifier</button></td>
+          <td><button class="btn btn-danger" (click)="onDeleteContact(c)">Sumpprimer</button></td>
+
+      </tr>
+      </tbody>
+    </table>
+    <div>
+      <ul class="nav nav-pills">
+        <li [ngClass]="{'active':pageCourante==i}" *ngFor="let p of pages;let i = index">
+        <a class="clickable"  (click)="goToPage(i)">{{i}}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
